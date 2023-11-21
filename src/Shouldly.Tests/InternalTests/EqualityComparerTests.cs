@@ -54,6 +54,16 @@ public class EqualityComparerTests
         eq2.EqualsOther.ShouldBeSameAs(eq1);
     }
 
+    [Fact]
+    public void Equals_PerformanceMeasure()
+    {
+        EqualityComparer_WhenGivenEqualLists_ShouldBeTrue();
+        EqualityComparer_WhenGivenNonComparableObject_ShouldBeTrue();
+        EqualityComparer_WhenGivenComparableObject_ShouldBeTrue();
+        EqualityComparer_WhenGivenComparableGeneric_ShouldBeTrue();
+        EqualityComparer_WhenGivenOverriddenEquatable_ShouldBeTrue();
+    }
+
     private class NonComparableObject
     {
         public override bool Equals(object? obj) => true;

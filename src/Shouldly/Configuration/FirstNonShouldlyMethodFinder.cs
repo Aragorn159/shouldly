@@ -25,7 +25,6 @@ public class FirstNonShouldlyMethodFinder : ITestMethodFinder
                 return new(callingFrame);
             }
         }
-
         throw new InvalidOperationException("Cannot find a non-Shouldly method in the stack trace.");
     }
 

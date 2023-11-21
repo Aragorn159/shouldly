@@ -15,7 +15,6 @@ public class FindMethodUsingAttribute<T> : ITestMethodFinder where T : Attribute
                 return new(frame);
             }
         }
-
         throw new InvalidOperationException($"Cannot find a method in the stack trace with attribute {typeof(T).FullName}.");
     }
 

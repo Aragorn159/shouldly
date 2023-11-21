@@ -2,7 +2,7 @@
 
 public static class ShouldlyCoreExtensions
 {
-    internal static bool IsShouldlyMethod(this MethodBase method)
+    public static bool IsShouldlyMethod(this MethodBase method)
     {
         if (method.DeclaringType == null)
             return false;
